@@ -1,0 +1,27 @@
+{
+  "mcpServers": {
+    "hashkey-dex-ai": {
+      "command": "cargo",
+      "args": [
+        "run",
+        "--release",
+        "--quiet"
+      ],
+      "env": {
+        "RUST_LOG": "info",
+        "HACKATHON_TRACK": "HashKey Chain",
+        "PROJECT_TICKER": "HKDEX"
+      },
+      "tools": [
+        {
+          "name": "verify_hkdex_invariants",
+          "description": "Verifies deterministic invariants for HashKey DEX AI on HashKey Chain."
+        },
+        {
+          "name": "execute_hkdex_action",
+          "description": "Executes authenticated DeFi state transition."
+        }
+      ]
+    }
+  }
+}
